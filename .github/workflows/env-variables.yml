@@ -5,7 +5,7 @@ name: env-practice
 on: workflow_dispatch
 
 env:
-  NAME: "NAVIN"
+  NAME: NAVIN
   AGE: 21
 
 jobs:
