@@ -1,0 +1,44 @@
+#we have an three set of env 
+#1. Gobal( Workflow) 2. Jobs( job level) 3. Steps (Steps level)
+
+name: env-practice
+on: workflow_dispatch
+
+env:
+  NAME: "NAVIN"
+  AGE: 21
+
+jobs:
+  global:
+   runs-on: ubuntu-latest
+   steps:
+     - name: global level check
+       run: |
+         echo:"My name is: $NAME"
+         echo: "MY AGE is: $age"
+  joblevl:
+    runs-on: ubuntu-latest
+    env:
+      NAME: "ZENITSU"
+
+    steps:
+      - name: Job level
+        run: |
+          echo: "My name is: $NAME"
+          echo: "My Age Is: $AGE"
+  stepslevl:
+    runs-on: ubuntu-latest
+    steps:
+      - name: steps level
+        env:
+          NAME: "TANJIRO"
+        run: |
+          echo: "my name is : $NAME"
+          echo: "my age is : $AGE"
+          
+        
+      
+          
+    
+  
+  
