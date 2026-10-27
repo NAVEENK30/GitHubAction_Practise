@@ -14,8 +14,8 @@ jobs:
    steps:
      - name: global level check
        run: |
-         echo:"My name is: $NAME"
-         echo: "MY AGE is: $age"
+         echo "My name is: $NAME"
+         echo "MY AGE is: $age"
   joblevl:
     runs-on: ubuntu-latest
     env:
@@ -24,8 +24,8 @@ jobs:
     steps:
       - name: Job level
         run: |
-          echo: "My name is: $NAME"
-          echo: "My Age Is: $AGE"
+          echo "My name is: $NAME"
+          echo "My Age Is: $AGE"
   stepslevl:
     runs-on: ubuntu-latest
     steps:
@@ -33,8 +33,8 @@ jobs:
         env:
           NAME: "TANJIRO"
         run: |
-          echo: "my name is : $NAME"
-          echo: "my age is : $AGE"
+          echo "my name is : $NAME"
+          echo "my age is : $AGE"
           
         
       
