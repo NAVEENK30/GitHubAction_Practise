@@ -1,0 +1,20 @@
+#make the jobs run one by one
+name: parllel jobs
+on: workflow_dispatch
+
+jobs:
+  fast_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: fast start
+        run: |
+          echo "hi"
+          sleep 5
+  slow_start:
+    runs-on: ubuntu-latest
+    steps:
+      - name: slow_start
+        run: |
+          echo "slow"
+          sleep 10
+    
